@@ -1,28 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Welcome to My Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ma'hawa's Corner</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #fafafa;
+      line-height: 1.6;
+      padding: 20px;
+      background-color: #f9f9f9;
       color: #333;
-      margin: 40px;
     }
     h1 {
-      color: #2c3e50;
+      animation: fadeIn 2s ease-in-out;
+      font-size: 2.5em;
     }
     p {
-      font-size: 18px;
-      line-height: 1.6;
+      animation: fadeIn 2s ease-in-out;
+      animation-delay: 0.5s;
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+    img.avatar {
+      width: 100px;
+      border-radius: 50%;
+      display: block;
+      margin-bottom: 15px;
+    }
+    span.highlight {
+      color: #ff6f61;
+      font-weight: bold;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .scroll-cue {
+      font-size: 0.9em;
+      color: #888;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
+  <img src="avatar.png" alt="Ma'hawa" class="avatar">
   <h1>Hi, I’m Ma'hawa 👋</h1>
-  <p>Welcome to my cozy corner online! Dive into my thoughts and meet the little ideas that make my brain tick—where imagination meets tech.</p>
+  <p>Welcome to my cozy corner online! Dive into my thoughts and meet the little ideas that make my brain tick—where <span class="highlight">imagination</span> meets <span class="highlight">tech</span>.</p>
   <p>Hang tight—there’s plenty more on the way! 🌱</p>
-
+  <p class="scroll-cue">👇 Scroll down to see more of my world</p>
 </body>
 </html>
