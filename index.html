@@ -37,7 +37,7 @@
       background-size: 400% 400%;
       animation: gradientShift 15s ease infinite;
       color: #fff;
-      padding: 60px 20px;
+      padding: 80px 20px 60px;
       text-align: center;
       border-radius: 0 0 30px 30px;
       box-shadow: 0 8px 25px rgba(0,0,0,0.7);
@@ -55,6 +55,18 @@
       transform: skewX(-20deg) scaleX(0);
       opacity: 0;
       animation: sparkle 4s ease-in-out infinite;
+    }
+
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #d2b48c;
+      object-fit: cover;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+      position: relative;
+      z-index: 1;
     }
 
     header h1 {
@@ -169,6 +181,7 @@
 <body>
 
   <header>
+    <img src="2.jpg" alt="Profile Picture">
     <h1>Ma'hawa</h1>
     <p>Public Health Officer | Computer Science Student | Creative Explorer</p>
   </header>
@@ -227,4 +240,5 @@
 
 </body>
 </html>
+
 
