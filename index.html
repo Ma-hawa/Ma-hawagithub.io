@@ -3,51 +3,230 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ma'hawa's Corner</title>
+  <title>Ma'hawa | Personal Website</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
       line-height: 1.6;
-      padding: 20px;
-      background-color: #f9f9f9;
-      color: #333;
+      background: #121212;
+      color: #eee;
     }
-    h1 {
-      animation: fadeIn 2s ease-in-out;
-      font-size: 2.5em;
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
-    p {
-      animation: fadeIn 2s ease-in-out;
-      animation-delay: 0.5s;
+
+    @keyframes sparkle {
+      0%, 100% { transform: translateX(-50%) scaleX(0); opacity: 0; }
+      50% { transform: translateX(50%) scaleX(1); opacity: 0.4; }
+    }
+
+    header {
+      position: relative;
+      background: linear-gradient(145deg,
+                  #556B2F 0%,
+                  #6B8E23 20%,
+                  #ffffff 45%,
+                  #d4af7f 70%,
+                  #b08d57 85%,
+                  #8c7045 100%);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+      border-radius: 0 0 30px 30px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+      overflow: hidden;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -50%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(120deg, rgba(255,255,255,0.6), rgba(255,255,255,0) 70%);
+      transform: skewX(-20deg) scaleX(0);
       opacity: 0;
-      animation-fill-mode: forwards;
+      animation: sparkle 4s ease-in-out infinite;
     }
-    img.avatar {
-      width: 100px;
-      border-radius: 50%;
-      display: block;
-      margin-bottom: 15px;
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+      letter-spacing: 1px;
+      position: relative;
+      z-index: 1;
     }
-    span.highlight {
-      color: #ff6f61;
+
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.3rem;
+      color: #f1f1f1;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+      position: relative;
+      z-index: 1;
+    }
+
+    nav {
+      background: #1f1f1f;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+    }
+
+    nav a {
+      color: #d2b48c;
+      text-decoration: none;
+      margin: 0 15px;
       font-weight: bold;
+      transition: all 0.3s ease;
+      font-size: 1.1rem;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+
+    nav a:hover {
+      color: #b08d57;
+      transform: scale(1.1);
     }
-    .scroll-cue {
-      font-size: 0.9em;
-      color: #888;
-      margin-top: 20px;
+
+    section {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: 40px auto;
+      background: #1e1e1e;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    }
+
+    h2 {
+      color: #d2b48c;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #333;
+      padding-bottom: 5px;
+    }
+
+    ul li {
+      margin: 10px 0;
+    }
+
+    /* Jungle Diaries */
+    #jungle {
+      background: #181818;
+      border-left: 5px solid #d2b48c;
+      font-family: 'Courier New', monospace;
+    }
+
+    .jungle-entry p {
+      color: #eee;
+      line-height: 1.7;
+      font-size: 1.1rem;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .jungle-entry p:hover {
+      transform: translateX(5px);
+      opacity: 0.9;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 25px;
+      margin-top: 50px;
+      box-shadow: inset 0 1px 5px rgba(255,255,255,0.1);
+    }
+
+    footer a {
+      color: #d2b48c;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #b08d57;
+    }
+
   </style>
 </head>
 <body>
-  <img src="avatar.png" alt="Ma'hawa" class="avatar">
-  <h1>Hi, I’m Ma'hawa 👋</h1>
-  <p>Welcome to my cozy corner online! Dive into my thoughts and meet the little ideas that make my brain tick—where <span class="highlight">imagination</span> meets <span class="highlight">tech</span>.</p>
-  <p>Hang tight—there’s plenty more on the way! 🌱</p>
-  <p class="scroll-cue">👇 Scroll down to see more of my world</p>
+
+  <header>
+    <h1>Ma'hawa</h1>
+    <p>Public Health Officer | Computer Science Student | Creative Explorer</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#blog">Blog</a>
+    <a href="#jungle">Jungle Diaries</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello 👋 I’m Ma'hawa, a Public Health Officer passionate about improving health systems and currently pursuing Computer Science. 
+    I enjoy linking technology with health, exploring creative writing, photography, and always learning something new.  
+    I’m also learning Chinese language to expand my horizons. This space is where I share my journey.</p>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <ul>
+      <li>💻 Python projects and coding exercises</li>
+      <li>📊 Data Science projects and exercises</li>
+      <li>🏥 Public Health Activities (Sanitation, Waste Management, Inspections)</li>
+      <li>🌍 NASA Space Apps Challenge exploration</li>
+    </ul>
+  </section>
+
+  <section id="blog">
+    <h2>Blog</h2>
+    <p>I write about technology, public health, and personal reflections. Here are a few samples:</p>
+    <ul>
+      <li><strong>Balance in Life:</strong> Reflection on calmness and being loud in a noisy world.</li>
+      <li><strong>The Rise of Pixels:</strong> Thoughts on digital life and identity.</li>
+      <li><strong>Critical Thinking & Puzzles:</strong> My love for Einstein’s puzzles and coding challenges.</li>
+    </ul>
+  </section>
+
+  <section id="jungle">
+    <h2>Jungle Diaries</h2>
+    <p>🌿 This is my personal space for writing in jungle language—creative, raw, and intimate. Words flow freely here.</p>
+    <div class="jungle-entry">
+      <p>Example entry: “Leaves whisper, rivers hum, thoughts wander beyond the human eye…”</p>
+      <p>Another entry can go here as your creative writing grows over time.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📧 Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <p>🔗 GitHub: <a href="https://github.com/ma-hawa" target="_blank">github.com/ma-hawa</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ma'hawa | Built with ❤️ and GitHub Pages | <a href="https://github.com/ma-hawa" target="_blank">GitHub</a></p>
+  </footer>
+
 </body>
 </html>
+
