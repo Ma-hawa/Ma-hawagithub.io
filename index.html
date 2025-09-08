@@ -3,77 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ma'hawa | Personal Website</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #121212;
-      color: #eee;
-      text-align: center;
-    }
-
-    header {
-      padding: 50px 20px;
-      background: linear-gradient(145deg, #556B2F, #6B8E23, #d4af7f, #8c7045);
-      color: #fff;
-      border-radius: 0 0 30px 30px;
-    }
-
-    header img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 4px solid #fff;
-      object-fit: cover;
-      margin-bottom: 20px;
-    }
-
-    header h1 {
-      margin: 10px 0 5px;
-      font-size: 2.5rem;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin: 0;
-    }
-
-    nav {
-      margin: 30px 0;
-    }
-
-    nav a {
-      color: #d2b48c;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      font-size: 1.2rem;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #fff;
-    }
-
-    footer {
-      background: #1a1a1a;
-      padding: 20px;
-      margin-top: 50px;
-      font-size: 0.9rem;
-      color: #aaa;
-    }
-
-    footer a {
-      color: #d2b48c;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      color: #fff;
-    }
-  </style>
+  <title>Ma'hawa's Corner | Codes, Chronicles & Curiosities.</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -84,17 +15,43 @@
   </header>
 
   <nav>
+    <a href="index.html" class="active">Home</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="blog.html">Blog</a>
     <a href="jungle.html">Jungle Diaries</a>
+    <a href="learning.html">Learning Hub</a>
     <a href="contact.html">Contact</a>
   </nav>
 
+  <main class="container">
+    <section>
+      <h2>Welcome!</h2>
+      <p>Hello! I’m Ma'hawa, blending health, tech, and creativity. Explore my work, reflections, adventures and shenanigans 😊 here.</p>
+    </section>
+  </main>
+
   <footer>
+    <div id="giscus-container"></div>
     <p>&copy; 2025 Ma'hawa | Built with ❤️ on GitHub Pages | 
     <a href="https://github.com/ma-hawa" target="_blank">GitHub</a></p>
   </footer>
 
+  <script src="https://giscus.app/client.js"
+      data-repo="Ma-hawa/Ma-hawagithub.io"
+      data-repo-id="R_kgDOPm7_HQ"
+      data-category="Comments"
+      data-category-id="DIC_kwDOPm7_Hc4CvKKl"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="preferred_color_scheme"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async>
+  </script>
 </body>
 </html>
 
