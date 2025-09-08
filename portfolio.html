@@ -4,134 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio | Ma'hawa</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #121212;
-      color: #eee;
-      line-height: 1.6;
-    }
-
-    header {
-      background: linear-gradient(145deg, #556B2F, #6B8E23, #d4af7f, #8c7045);
-      padding: 40px 20px;
-      text-align: center;
-      color: #fff;
-      border-radius: 0 0 20px 20px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    nav {
-      text-align: center;
-      padding: 15px;
-      background: #1f1f1f;
-    }
-
-    nav a {
-      color: #d2b48c;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #fff;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
-    }
-
-    .project {
-      background: #1e1e1e;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .project:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.7);
-    }
-
-    h2 {
-      color: #d2b48c;
-      border-bottom: 2px solid #333;
-      padding-bottom: 5px;
-      margin-bottom: 15px;
-    }
-
-    footer {
-      background: #1a1a1a;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      color: #aaa;
-      font-size: 0.9rem;
-    }
-
-    footer a {
-      color: #d2b48c;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      color: #fff;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
     <h1>My Portfolio</h1>
-    <p>A collection of my projects, activities, and explorations</p>
+    <p>A collection of projects, experiments, and creative shenanigans</p>
   </header>
 
   <nav>
     <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
+    <a href="portfolio.html" class="active">Portfolio</a>
     <a href="blog.html">Blog</a>
     <a href="jungle.html">Jungle Diaries</a>
+    <a href="learning.html">Learning Hub</a>
     <a href="contact.html">Contact</a>
   </nav>
 
   <div class="container">
     <section class="project">
-      <h2>💻 Python Projects & Coding Exercises</h2>
-      <p>Various Python scripts and problem-solving exercises, including calculators, automation scripts, and algorithm practice.</p>
+      <h2>💻 Python Projects & Coding Experiments</h2>
+      <p>Calculators, scripts, algorithms, and problem-solving adventures in code.</p>
     </section>
 
     <section class="project">
-      <h2>📊 Data Science Projects</h2>
-      <p>Hands-on exercises with datasets, visualization projects, and small machine learning experiments.</p>
+      <h2>📊 Data Science & Visualization</h2>
+      <p>Datasets, charts, and small machine learning experiments.</p>
     </section>
 
     <section class="project">
       <h2>🏥 Public Health Activities</h2>
-      <p>Reports and documentation of sanitation inspections, waste management evaluations, and other fieldwork activities.</p>
+      <p>Sanitation inspections, waste management reports, and fieldwork documentation.</p>
     </section>
 
     <section class="project">
-      <h2>🌍 NASA Space Apps Challenge</h2>
-      <p>Explorations and contributions to global challenges in science, technology, and creativity as part of NASA’s innovation event.</p>
+      <h2>🌍 NASA Space Apps Challenges</h2>
+      <p>Participation in global innovation events tackling creative science and tech challenges.</p>
     </section>
   </div>
 
   <footer>
+    <div id="giscus-container"></div>
     <p>&copy; 2025 Ma'hawa | Built with ❤️ on GitHub Pages | 
     <a href="https://github.com/ma-hawa" target="_blank">GitHub</a></p>
   </footer>
 
+  <script src="https://giscus.app/client.js"
+      data-repo="Ma-hawa/Ma-hawagithub.io"
+      data-repo-id="R_kgDOPm7_HQ"
+      data-category="Comments"
+      data-category-id="DIC_kwDOPm7_Hc4CvKKl"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="preferred_color_scheme"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async>
+  </script>
 </body>
 </html>
