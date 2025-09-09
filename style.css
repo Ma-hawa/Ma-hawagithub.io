@@ -9,7 +9,7 @@
 }
 
 body {
-  background: #121212;
+  background: #121212; /* Dark mode background */
   color: #e0e0e0;
   line-height: 1.6;
 }
@@ -131,6 +131,23 @@ nav a:hover {
 
 .blog-post a:hover {
   color: #9c79c7;
+}
+
+/* ===============================
+   Poem Post Specific
+=============================== */
+.blog-post img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.blog-post .intro {
+  font-style: italic;
+  color: #dcd6f7; /* Softer, easier on the eyes */
+  font-size: 1.1rem;
+  margin-bottom: 15px;
 }
 
 /* ===============================
