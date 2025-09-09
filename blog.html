@@ -28,24 +28,29 @@
 
   <!-- Blog Section -->
   <main class="blog-container">
+
+    <!-- Poem Post -->
     <article class="blog-post">
-      <h2>Oops! I Did It Again</h2>
+      <h2>Invictus | Poem</h2>
       <p class="date">September 2025</p>
-      <p>First blog post content. A mix of reflections, experiences, and occasional randomness.</p>
-      <a href="#">Read More</a>
+      <img src="ocean.jpg" alt="Ocean Poem Image" class="post-image">
+      <p class="post-intro">Between water and sky, I write, I dream and I am, The Invictus</p>
+      
+      <div class="post-full">
+        <p>Out of the sea water that flows beneath my feet, spare my unseeable wounds the sting of the salty ocean.
+        I shall hiss for sure when the pain sears through, but neither shall a tear fall, nor a plea escape, for this pain
+        finds, and shall find, me scarred, but not conquered.
+        Firm I shall stand, with my battered feet deep-rooted into the wet shoal, for I was born and raised to be an undefeatable soul.</p>
+      </div>
+      
+      <a class="read-more-btn" onclick="togglePost(this)">Read More</a>
     </article>
 
-    <article class="blog-post">
-      <h2>Adventures in Overthinking</h2>
-      <p class="date">September 2025</p>
-      <p>Another post. Because life is too short not to analyze everything creatively.</p>
-      <a href="#">Read More</a>
-    </article>
   </main>
 
-  <!-- Comments -->
+  <!-- Comments Section -->
   <section class="comments-section">
-    <div id="giscus-container"></div>
+    <div id="giscus-container-post1"></div>
     <script src="https://giscus.app/client.js"
         data-repo="Ma-hawa/Ma-hawagithub.io"
         data-repo-id="R_kgDOPm7_HQ"
@@ -68,6 +73,20 @@
   <footer>
     <p>© 2025 Ma'hawa | Built with ❤️</p>
   </footer>
+
+  <!-- Script for Read More -->
+  <script>
+    function togglePost(button) {
+      const fullContent = button.previousElementSibling;
+      if(fullContent.style.display === "block") {
+        fullContent.style.display = "none";
+        button.textContent = "Read More";
+      } else {
+        fullContent.style.display = "block";
+        button.textContent = "Show Less";
+      }
+    }
+  </script>
 
 </body>
 </html>
