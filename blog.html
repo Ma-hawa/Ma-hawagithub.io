@@ -3,90 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ma'hawa's Quiet Odyssey</title>
+  <title>My Blog</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Navigation -->
   <header>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="blog.html" class="active">Blog</a>
-      <a href="jungle.html">Jungle Diaries</a>
-      <a href="learning.html">Learning Hub</a>
-      <a href="contact.html">Contact</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learning.html">Learning</a></li>
+        <li><a href="jungle.html">Jungle</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>My Odyssey</h1>
-    <p>Reflections, thoughts, shenanigans, and personal adventures… brace yourself!</p>
-  </section>
-
-  <!-- Blog Section -->
   <main class="blog-container">
-
-    <!-- Poem Post -->
-    <article class="blog-post">
-      <h2>Invictus | Poem</h2>
-      <p class="date">September 2025</p>
-      <img src="ocean.jpg" alt="Ocean Poem Image" class="post-image">
-      <p class="post-intro">Between water and sky, I write, I dream and I am, The Invictus</p>
-      
-      <div class="post-full">
-        <p>Out of the sea water that flows beneath my feet, spare my unseeable wounds the sting of the salty ocean.
-        I shall hiss for sure when the pain sears through, but neither shall a tear fall, nor a plea escape, for this pain
-        finds, and shall find, me scarred, but not conquered.
-        Firm I shall stand, with my battered feet deep-rooted into the wet shoal, for I was born and raised to be an undefeatable soul.</p>
-      </div>
-      
-      <a class="read-more-btn" onclick="togglePost(this)">Read More</a>
+    <!-- POST 1 -->
+    <article class="post-card">
+      <a href="post1.html">
+        <img src="invictus.png" alt="Invictus Poem">
+        <div class="post-intro">
+          <h2>Invictus | Poem</h2>
+          <p><em>✨ Between water and sky, I write, I dream and I am - The Invictus 🌊☁️</em></p>
+          <span class="read-more">Read more →</span>
+        </div>
+      </a>
     </article>
 
+    <!-- POST 2 -->
+    <article class="post-card">
+      <a href="post2.html">
+        <img src="pride.png" alt="Pride Reflection">
+        <div class="post-intro">
+          <h2>The Weight of the Phrase “I’m Proud of You” | Reflection</h2>
+          <p><em>🤔 A phrase we hear often, but do we really understand the depth of pride? 🤔💭</em></p>
+          <span class="read-more">Read more →</span>
+        </div>
+      </a>
+    </article>
   </main>
-
-  <!-- Comments Section -->
-  <section class="comments-section">
-    <div id="giscus-container-post1"></div>
-    <script src="https://giscus.app/client.js"
-        data-repo="Ma-hawa/Ma-hawagithub.io"
-        data-repo-id="R_kgDOPm7_HQ"
-        data-category="Comments"
-        data-category-id="DIC_kwDOPm7_Hc4CvKKl"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="dark_protanopia"
-        data-lang="en"
-        data-loading="lazy"
-        crossorigin="anonymous"
-        async>
-    </script>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Ma'hawa | Built with ❤️</p>
-  </footer>
-
-  <!-- Script for Read More -->
-  <script>
-    function togglePost(button) {
-      const fullContent = button.previousElementSibling;
-      if(fullContent.style.display === "block") {
-        fullContent.style.display = "none";
-        button.textContent = "Read More";
-      } else {
-        fullContent.style.display = "block";
-        button.textContent = "Show Less";
-      }
-    }
-  </script>
-
 </body>
 </html>
