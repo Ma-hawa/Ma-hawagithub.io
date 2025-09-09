@@ -35,6 +35,15 @@ header p {
   margin-bottom: 10px;
 }
 
+header img {
+  width: 150px;   /* reduced size */
+  height: 150px;  /* reduced size */
+  object-fit: cover;
+  border-radius: 50%; /* optional circular look */
+  margin-top: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
 nav {
   text-align: center;
   padding: 15px;
@@ -120,7 +129,7 @@ nav a:hover {
 
 .blog-post .post-image {
   width: 100%;
-  max-height: 400px;
+  max-height: 250px; /* reduced height */
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 15px;
@@ -323,5 +332,9 @@ footer a:hover {
   header img {
     width: 120px;
     height: 120px;
+  }
+
+  .blog-post .post-image {
+    max-height: 180px; /* smaller on mobile */
   }
 }
