@@ -15,37 +15,26 @@ body {
 }
 
 /* ===============================
-   Header / Profile Banner
+   Header / Navigation
 =============================== */
 header {
-  background: #bfa2db; /* Lavender banner for profile */
+  background: #bfa2db; /* Lavender banner */
   padding: 50px 20px;
   text-align: center;
   color: #121212;
   border-radius: 0 0 30px 30px;
 }
 
-header img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 4px solid #fff;
-  object-fit: cover;
-  margin-bottom: 20px;
-}
-
 header h1 {
   font-size: 2.5rem;
-  margin: 10px 0 5px;
+  margin-bottom: 10px;
 }
 
 header p {
   font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
-/* ===============================
-   Navigation
-=============================== */
 nav {
   text-align: center;
   padding: 15px;
@@ -70,7 +59,6 @@ nav a:hover {
 =============================== */
 .hero {
   background: linear-gradient(to right, #1e1e1e, #2e2e2e);
-  color: #e0e0e0;
   text-align: center;
   padding: 60px 20px;
 }
@@ -97,13 +85,14 @@ nav a:hover {
   background: #1e1e1e;
   padding: 25px;
   margin-bottom: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-  transition: transform 0.2s ease;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .blog-post:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.6);
 }
 
 .blog-post h2 {
@@ -119,61 +108,44 @@ nav a:hover {
 
 .blog-post p {
   margin-bottom: 15px;
-}
-
-.blog-post a {
-  display: inline-block;
-  color: #bfa2db;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.blog-post a:hover {
-  color: #9c79c7;
-}
-
-/* ===============================
-   Poem Post Specific
-=============================== */
-.blog-post img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.blog-post .intro {
-  font-style: italic;
-  color: #dcd6f7; /* Softer, easier on the eyes */
-  font-size: 1.1rem;
-  margin-bottom: 15px;
-}
-
-/* ===============================
-   Jungle Section
-=============================== */
-.jungle-container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.jungle-post {
-  background: #1e1e1e;
-  padding: 25px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-}
-
-.jungle-post h2 {
-  color: #bfa2db;
-  margin-bottom: 10px;
-}
-
-.jungle-post p {
   color: #e0e0e0;
+  line-height: 1.7;
+}
+
+.blog-post .post-intro {
+  font-style: italic;
+  color: #dcdcdc;
+  margin-bottom: 15px;
+}
+
+.blog-post .post-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+.blog-post .post-full {
+  display: none;
+  margin-top: 15px;
+}
+
+.blog-post .read-more-btn {
+  display: inline-block;
+  background: #bfa2db;
+  color: #121212;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.blog-post .read-more-btn:hover {
+  background: #9c79c7;
 }
 
 /* ===============================
@@ -211,7 +183,33 @@ nav a:hover {
 }
 
 /* ===============================
-   Learning Hub
+   Jungle Diaries Section
+=============================== */
+.jungle-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.jungle-post {
+  background: #1e1e1e;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+.jungle-post h2 {
+  color: #bfa2db;
+  margin-bottom: 10px;
+}
+
+.jungle-post p {
+  color: #e0e0e0;
+}
+
+/* ===============================
+   Learning Hub Section
 =============================== */
 .learning-container {
   max-width: 800px;
@@ -223,10 +221,6 @@ nav a:hover {
 .learning-topic h2 {
   color: #bfa2db;
   margin-bottom: 10px;
-}
-
-#comments {
-  margin-top: 30px;
 }
 
 /* ===============================
